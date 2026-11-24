@@ -1,143 +1,104 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Book Shop</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f4f4;
-        }
-
-        header {
-            background: #4b2e20;
-            color: white;
-            padding: 25px;
-            text-align: center;
-        }
-
-        nav {
-            background: #333;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-        }
-
-        .banner {
-            background: #ead8c0;
-            text-align: center;
-            padding: 40px;
-        }
-
-        .books {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 30px;
-        }
-
-        .book {
-            background: white;
-            width: 200px;
-            padding: 20px;
-            text-align: center;
-            border-radius: 10px;
-        }
-
-        .book h3 {
-            color: #4b2e20;
-        }
-
-        button {
-            background: #4b2e20;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Kolhapur Tourism</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>📚 My Book Shop</h1>
-        <p>Your favorite books in one place</p>
-    </header>
+<!-- ===== NAVBAR ===== -->
+<header>
+  <div class="logo">Kolhapur Tourism</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#places">Places</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#books">Books</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<!-- ===== HERO SECTION ===== -->
+<section id="home" class="hero">
+  <body background="images/images(7).jpg">
+<center><font color="white" size="20">KOLHAPUR TOURISM</center></font>
+<b><marquee behavior="alternate"><font color="white" size="6">Welcome To Kolhapur</marquee></font></b>
+ <p>Land of Temples, History & Culture</p>
+</section>
 
-    <section class="banner">
-        <h2>Welcome to My Book Shop</h2>
-        <p>Read More. Learn More. Grow More.</p>
-    </section>
+<!-- ===== PLACES ===== -->
+<section id="places" class="container">
+  <h2>Popular Tourist Places</h2>
 
-    <section id="books">
-        <h2 style="text-align:center;">Available Books</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="images/mahalaxmi.jpg">
+      <h3>Mahalaxmi Temple</h3>
+      <p>One of the Shakti Peethas, famous for spiritual importance.</p>
+    </div>
 
-        <div class="books">
+    <div class="card">
+      <img src="images/rankala.jpg">
+      <h3>Rankala Lake</h3>
+      <p>A beautiful lake perfect for evening walks and photography.</p>
+    </div>
 
-            <div class="book">
-                <h3>Atomic Habits</h3>
-                <p>Author: James Clear</p>
-                <p>Price: ₹399</p>
-                <button onclick="alert('Book selected!')">Buy Now</button>
-            </div>
+    <div class="card">
+      <img src="images/panhala.jpg">
+      <h3>Panhala Fort</h3>
+      <p>Historic fort associated with Chhatrapati Shivaji Maharaj.</p>
+    </div>
 
-            <div class="book">
-                <h3>Rich Dad Poor Dad</h3>
-                <p>Author: Robert Kiyosaki</p>
-                <p>Price: ₹299</p>
-                <button onclick="alert('Book selected!')">Buy Now</button>
-            </div>
+    <div class="card">
+      <img src="images/jyotiba.jpg">
+      <h3>Jyotiba Temple</h3>
+      <p>Famous hilltop temple with scenic views.</p>
+    </div>
+  </div>
+</section>
 
-            <div class="book">
-                <h3>Bhagavad Gita</h3>
-                <p>Author: Ved Vyasa</p>
-                <p>Price: ₹250</p>
-                <button onclick="alert('Book selected!')">Buy Now</button>
-            </div>
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="container">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="images/1.jpg"> 
+    <img src="images/2.jpg">
+    <img src="images/3.jpg">
+    <img src="images/4.jpg">
+  </div>
+</section>
 
-            <div class="book">
-                <h3>The Alchemist</h3>
-                <p>Author: Paulo Coelho</p>
-                <p>Price: ₹350</p>
-                <button onclick="alert('Book selected!')">Buy Now</button>
-            </div>
+<!-- ===== MAP ===== -->
+<section class="container">
+  <h2>Location</h2>
+  <iframe
+    src="https://www.google.com/maps?q=Kolhapur,Maharashtra&output=embed"
+    width="100%" height="300" style="border:0;" loading="lazy">
+  </iframe>
+</section>
 
-        </div>
-    </section>
+<!-- ===== CONTACT FORM ===== -->
+<section id="contact" class="container">
+  <h2>Contact Us</h2>
 
-    <section id="contact" style="text-align:center; padding:30px;">
-        <h2>Contact Us</h2>
-        <p>Email: mybookshop@example.com</p>
-    </section>
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
 
-    <footer>
-        <p>© 2026 My Book Shop</p>
-    </footer>
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p><h2></h2>© 2026 Kolhapur Tourism | Designed by Mayur Patil</p></h2>
+</footer>
 
 </body>
 </html>
+
+
+
+
